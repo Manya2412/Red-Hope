@@ -2,6 +2,7 @@ import "./Styles.css";
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; 
 
+// Footer
 function Footer() {
   return (
     <section className="footer">
