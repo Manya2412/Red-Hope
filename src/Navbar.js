@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./Styles.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-
+// Navbar
 function Navbar() {
     const menuRef = useRef(null);
     const navbarRef = useRef(null);
