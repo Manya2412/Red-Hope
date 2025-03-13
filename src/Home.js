@@ -1,6 +1,8 @@
 import "./Styles.css";
 import React from "react";
 
+//Our  Collaborators
+// Our Services
 const OurServices = () => {
     const services = [
       { name: "Extensive Blood Donor Database", dark: "img/Our Services Dark/Donor Database.png", light: "img/Our Services Light/Donor Database.png" },
