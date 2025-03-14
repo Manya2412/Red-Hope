@@ -1,7 +1,10 @@
 import "./Styles.css";
 import React from "react";
 
+//Our Mission
+
 //Our  Collaborators
+
 // Our Services
 const OurServices = () => {
     const services = [
