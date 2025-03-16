@@ -2,6 +2,7 @@ import "./Styles.css";
 import { useState, useEffect } from "react";
 
 //Home Intro
+
 //Our Mission
 
 //Our  Collaborators
