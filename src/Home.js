@@ -1,9 +1,13 @@
 import "./Styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 // import { useState, useEffect } from "react";
 
 //Our Mission
-
-//Our  Collaborators
 
 
 // Home Intro 
@@ -20,6 +24,51 @@ const HomeIntro = () => {
     </section>
   );
 };
+
+//Our  Collaborators
+const collaborators = [
+    { name: "FORTIS", img: "/Hospital1.png" },
+    { name: "AIIMS", img: "/Hospital2.png" },
+    { name: "MAX", img: "/Hospital3.png" },
+    { name: "MEDANTA", img: "/Hospital4.png" },
+    { name: "SIR GANGARAM", img: "/Hospital5.png" },
+    { name: "APOLLO", img: "/Hospital6.png" },
+  ];
+  
+  const Collaborators = () => {
+    return (
+      <section className="collaborators">
+        <h1 className="heading-title">Our Collaborators</h1>
+        {/*<Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={3}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{ delay: 1500, disableOnInteraction: false }}
+          pagination={{ clickable: true, el: ".swiper-pagination" }}
+          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+          className="mySwiper"
+          breakpoints={{
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            480: { slidesPerView: 1 },
+          }}
+        >
+          {collaborators.map((collaborator, index) => (
+            <SwiperSlide key={index}>
+              <img src={collaborator.img} alt={collaborator.name} />
+              <div className="slide-content">{collaborator.name}</div>
+            </SwiperSlide>
+          ))}
+        </Swiper>*/}
+  
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
+      </section>
+    );
+  };
 
 // Our Services 
 function OurServices() {
@@ -53,7 +102,7 @@ function OurServices() {
 }
 
 
-export { HomeIntro, OurServices };
+export { HomeIntro, Collaborators, OurServices };
 
 
   

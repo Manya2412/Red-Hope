@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './Navbar';
 import Footer from "./Footer";
-import {HomeIntro, OurServices} from './Home';
+import {HomeIntro, Collaborators, OurServices} from './Home';
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <HomeIntro />
+      <Collaborators />
       <OurServices />
       <Footer />
     </div>
