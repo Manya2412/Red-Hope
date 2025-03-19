@@ -1,9 +1,11 @@
-import "./Styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; 
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import "./Styles.css";
+
 
 // import { useState, useEffect } from "react";
 
@@ -35,40 +37,41 @@ const collaborators = [
     { name: "APOLLO", img: "/Hospital6.png" },
   ];
   
-  const Collaborators = () => {
+  function Collaborators() {
     return (
-      <section className="collaborators">
-        <h1 className="heading-title">Our Collaborators</h1>
-        {/*<Swiper
-          modules={[Pagination, Navigation, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={3}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{ delay: 1500, disableOnInteraction: false }}
-          pagination={{ clickable: true, el: ".swiper-pagination" }}
-          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-          className="mySwiper"
-          breakpoints={{
-            1024: { slidesPerView: 3 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 },
-          }}
-        >
-          {collaborators.map((collaborator, index) => (
-            <SwiperSlide key={index}>
-              <img src={collaborator.img} alt={collaborator.name} />
-              <div className="slide-content">{collaborator.name}</div>
-            </SwiperSlide>
-          ))}
-        </Swiper>*/}
-  
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-      </section>
+        <section className="collaborators">
+            <h1 className="heading-title">Our Collaborators</h1>
+            <div className="swiper-container">
+                <Swiper
+                    modules={[Pagination, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    centeredSlides={true}
+                    loop={true}
+                    autoplay={{ delay: 1500, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    className="swiper mySwiper"
+                    breakpoints={{
+                        1024: { slidesPerView: 3 },
+                        768: { slidesPerView: 2 },
+                        480: { slidesPerView: 1 },
+                    }}
+                >
+                    <div className="swiper-wrapper">
+                        {collaborators.map((collaborator, index) => (
+                            <SwiperSlide key={index} className="swiper-slide">
+                                <img src={collaborator.img} alt={collaborator.name} />
+                                <div className="slide-content">{collaborator.name}</div>
+                            </SwiperSlide>
+                        ))}
+                    </div>
+                </Swiper>
+                <div className="swiper-pagination"></div>
+            </div>
+        </section>
     );
-  };
+}
+  
 
 // Our Services 
 function OurServices() {

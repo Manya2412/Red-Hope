@@ -15,7 +15,7 @@
     --black:#222;
     --white:#fff;
     --light-black:#777;
-    --light_white:#fff9;
+    --light_white:rgba(255, 255, 255, 0.6);
     --dark-bg:rgba(0,0,0,.7);
     --light-bg:#eee;
     --border:.1em solid var(--black);
@@ -65,15 +65,21 @@ section{
 .heading{
     background-size:cover !important;
     background-position: center !important;
-    padding-top: 10rem;
-    padding-bottom: 15rem;
+    padding: 5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 15px;
+    background: linear-gradient(90deg, #46052D, #500732, #560832, #5E0933, #610834, #6A0B37, #991747, #B32346);
+    background-size: 10% 10%;
+    animation: gradientAnimation 8s ease infinite;
 }
 
 .heading h1{
-    font-size: 10rem;
+    font-size: 5rem;
     text-transform: uppercase;
     color: var(--white);
     text-shadow: var(--text-shadow);
@@ -103,23 +109,14 @@ section{
 
 .header{
     position: sticky;
-    top: 0; 
-    left: 0;
-    right: 0;
     z-index: 1000;
-    background-color: var(--white);
-    max-height: 13vh;
     display: flex;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: var(--box-shadow);
     align-items: center;
     justify-content: space-between;
-}
-
-.header .logo{
-    font-size: 2.5rem;
-    color: var(--black);
 }
 
 .header .navbar a{
@@ -139,249 +136,74 @@ section{
     display: none;
 }
 
-.mission-box{
-    margin: 150px;
-    background-color: var(--white);
+
+
+.login-box{
+    padding: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background: var(--white);
     box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.mission-box h1{
-    font-size: 50px;
-}
-
-.mission-box p{
-    font-size: 1.5rem;
-}
-
-.home-intro{
-    /*background: url('/img/NewHome.png') no-repeat center center/cover;*/
-    height: 900px;
-    width: 100%;
-}
-
-.home-intro .intro-content {
-    text-align: right;
-}
-
-.home-intro .intro-content h1{
-    font-size: 10rem;
-    font-family: roboto;
-    text-shadow: var(--text-shadow);
-}
-
-.home-intro .intro-content h2{
-    font-size: 6rem;
-    font-family: roboto;
-    text-shadow: var(--text-shadow);
-}
-
-.home-intro .intro-content p{
-    font-size: 1.5rem;
-    padding-top: 2rem;
-}
-
-.home-intro .intro-content .intro-btn{
-    display: inline-block;
-    background: var(--black);
-    margin-top: 2rem;
-    color: var(--white);
-    font-size: 1.7rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    align-items: right;
-    margin-left: auto;
-}
-
-.home-intro .intro-content .intro-btn:hover{
-    background: var(--main-color);
-}
-
-.collaborators {
-    background: var(--white);
-    font-size: 20px;
-    color: var(--black);
-    margin: 0;
-    padding: 20px;
-  }
-
-.collaborators .h1{
-    font-size: 10px;
-}
-
-.swiper {
-    width: 90%;
-    height: auto;
-    padding-bottom: 50px;
-  }
-
-.swiper-slide {
-    text-align: center;
-    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    background: var(--white);
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 15px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-.swiper-slide:not(.swiper-slide-active) {
-    transform: scale(0.7);
-    opacity: 0.7;
-    box-shadow: 1 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.swiper-slide-active {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.swiper-slide img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-  }
-
-.slide-content{
-    margin-top: 10px;
-    font-weight: bold;
+.login-box .right-side h2{
     font-size: 30px;
-}
-
-.swiper-pagination{
-    position: relative;
-    margin-top: 30px;
-    color: (--main-color);
-}
-
-.swiper-pagination-bullet {
-    background-color: var(--color1); 
-    opacity: 0.6;
-    width: 10px; 
-    height: 10px;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-  }
-  
-.swiper-pagination-bullet-active {
-    background-color: var(--color10); 
-    opacity: 1;
-    width: 12px;
-    height: 12px;
-    padding-top: 10px;
-  }
- 
-.home{
-    padding: 0;
-}
-
-.home .slide{
     text-align: center;
-    padding: 2rem;
+    margin-bottom: 10px;
+}
+
+.right-side .book-form .flex {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover !important;
-    background-position: center !important;
-    min-height: 60rem;
+    flex-direction: column; /* Ensures each inputBox appears on a new line */
+    gap: 1rem; /* Adds spacing between rows */
 }
 
-.home .slide .content{
-    width: 85rem;
-    display:none;
+.right-side .book-form .flex .inputBox {
+    display: flex;
+    align-items: center; /* Aligns text and input vertically */
+    justify-content: space-between; /* Distributes label and input */
+    width: 100%;
+    gap: 1rem; /* Adds spacing between label and input */
 }
 
-.home .swiper-slide-active .content{
-    display: inline-block;
+.right-side .book-form .flex .inputBox span {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    min-width: 150px; /* Ensures consistent width for labels */
+    font-weight: bold; /* Optional: makes labels bold */
 }
 
-.home .slide .content span{
-    display: block;
-    font-size: 2.2rem;
-    color: var(--light_white);
-    padding-bottom: 1.5rem;
-    animation: fadeIn .2s linear backwards .2s;
+.right-side .book-form .flex .inputBox input {
+    flex: 1; /* Makes input take the remaining space */
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--light-black);
+    text-transform: none;
+    border: var(--border);
 }
 
-.home .slide .content h3{
-    font-size: 6vw;
-    color: var(--white);
-    text-transform: uppercase;
-    line-height: 1;
-    text-shadow: var(--text-shadow);
-    padding: 1rem 0;
-    animation: fadeIn .2s linear backwards .4s;
+.right-side .book-form .flex .inputBox input:focus{
+    background: var(--light-bg);
+    color: var(--color10);
 }
 
-.home .slide .content .btn{
-    animation: fadeIn .2s linear backwards .6s;
+.right-side .book-form .flex .inputBox input::placeholder{
+    color: var(--color10);
 }
 
-.home .swiper-button-next,
-.home .swiper-button-prev{
-    top: inherit;
-    left: inherit;
-    bottom: 0;
-    right: 0;
-    height: 7rem;
-    width: 7rem;
-    background: var(--white);
-    color: var(--black);
+
+.right-side .book-form .btn{
+    margin-top: 2rem;
 }
 
-.home .swiper-button-next:hover,
-.home .swiper-button-prev:hover{
-    background: var(--main-color);
-    color: var(--white);
-}
-
-.home .swiper-button-next::after,
-.home .swiper-button-prev::after{
-    font-size: 2rem;
-}
-
-.home .swiper-button-prev{
-    right: 7rem;
-}
-
-.services .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 1.5rem;
-}
-.services .box-container .box h3{
-    color: var(--white);
-    font-size: 1.7rem;
-    padding-top: 1rem;
-}
-
-.services .box-container .box {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: var(--color1);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.services .box-container .box:hover {
-    background: var(--color10);
-    transform: scale(1.05);
-}
-
-.services .box-container .box img {
-    height: 7rem;
-    transition: transform 0.3s ease-in-out;
-}
 
 .footer{
     background-color: #1E2833;
     background-size: cover;
     background-position: center;
-    padding: 1.5% 6%;
 }
 
 .upper-footer {
