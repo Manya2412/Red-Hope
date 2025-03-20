@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./Styles.css";
+import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Navbar
@@ -32,15 +33,15 @@ function Navbar() {
       
   return (
     <section className="header">
-      <a href="#" className="company-logo">
-        <img src="/logo.png" className="logo" alt="Logo" width="100px" />
-      </a>
+      <Link to="/home" className="company-logo">
+      <img src="/logo.png" className="logo" alt="Logo" width="100px" />
+      </Link>
       <nav ref={navbarRef} className="navbar">
-        <a href="/home">Home</a>
-        <a href="/aboutus">About Us</a>
-        <a href="/FindBlood">Find Blood</a>
-        <a href="/RegisterNow">Register Now</a>
-        <a href="/login">Log In</a>
+        <Link to="/Home">Home</Link>
+        {/*<a href="/aboutus">About Us</a>
+        <a href="/FindBlood">Find Blood</a>*/}
+        <Link to="/Register">Register Now</Link>
+        <Link to="/Login">Log In</Link>
       </nav>
       <i ref={menuRef} id="menu-btn" className="fas fa-bars"></i>
     </section>
