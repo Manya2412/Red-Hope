@@ -38,8 +38,8 @@ function Navbar() {
       </Link>
       <nav ref={navbarRef} className="navbar">
         <Link to="/Home">Home</Link>
-        {/*<a href="/aboutus">About Us</a>
-        <a href="/FindBlood">Find Blood</a>*/}
+        {/*<a href="/aboutus">About Us</a>*/}
+        <Link to="/FindBlood">Find Blood</Link>
         <Link to="/Register">Register Now</Link>
         <Link to="/Login">Log In</Link>
       </nav>
