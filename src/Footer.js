@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 function Footer() {
   return (
     <section className="footer">
-      <div className="upper-footer" style={{paddingTop: "0"}}>
+      <div className="upper-footer">
         <a href="#" onClick={() => window.location.reload()} className="company-logo">
           <img src="/logo.png" className="logo" alt="Logo" width="70px" />
         </a>
@@ -16,7 +16,7 @@ function Footer() {
         </h2>
       </div>
 
-      <div className="box-container" style={{ paddingTop: "3rem", paddingBottom: "0" }}>
+      <div className="box-container">
         {/* Quick Links */}
         <div className="box">
           <h3>Quick Links</h3>
