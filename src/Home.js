@@ -1,5 +1,7 @@
 import React from "react";
 import "./Styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 // import { useState, useEffect } from "react";
 
 // Home Intro 
@@ -20,6 +22,46 @@ const HomeIntro = () => {
 //Our Mission
 
 //Our  Collaborators
+const collaborators = [
+  { img: "/Hospital1.png", name: "FORTIS" },
+  { img: "/Hospital2.png", name: "AIIMS" },
+  { img: "/Hospital3.png", name: "MAX" },
+  { img: "/Hospital4.png", name: "MEDANTA" },
+  { img: "/Hospital5.png", name: "SIR GANGARAM" },
+  { img: "/Hospital6.png", name: "APOLLO" },
+];
+
+const Collaborators = () => {
+  return (
+    <section className="collaborators">
+      <h1 className="heading-title">Our Collaborators</h1>
+
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={3}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true, dynamicBullets: false }}
+        className="mySwiper"
+      >
+        {collaborators.map((collab, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide">
+              <img src={collab.img} alt={collab.name} />
+              <div className="slide-content">{collab.name}</div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+};
+
 
 // Our Services 
 function OurServices() {
@@ -53,7 +95,7 @@ function OurServices() {
 }
 
 
-export { HomeIntro, OurServices };
+export { HomeIntro, Collaborators, OurServices };
 
 
   

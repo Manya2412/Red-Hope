@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import RegisterDonor from './Register';
 import LoginForm from './Login';
 import Blood from './FindBlood';
-import {HomeIntro, OurServices} from './Home';
+import {HomeIntro, Collaborators, OurServices} from './Home';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -17,7 +17,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Navigate to="/Home" />} />
-          <Route path="/Home" element={<> <HomeIntro /> <OurServices /> </>} />
+          <Route path="/Home" element={<> <HomeIntro /> <Collaborators /> <OurServices /> </>} />
           <Route path="/FindBlood" element={<Blood />} />
           <Route path="/Register" element={<RegisterDonor />} />
           <Route path="/login" element={<LoginForm />} />
