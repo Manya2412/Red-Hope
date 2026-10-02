@@ -34,7 +34,7 @@ function Footer() {
         {/* Extra Links */}
         <div className="box">
           <h3>Extra Links</h3>
-          <Link to="/FAQ"><i className="fas fa-angle-right"></i> Ask Questions</Link>
+          <Link to="/home#faq"><i className="fas fa-angle-right"></i> Ask Questions</Link>
           <Link to="/AboutUs"><i className="fas fa-angle-right"></i> About Us</Link>
           <Link to="/PrivacyPolicy"><i className="fas fa-angle-right"></i> Privacy Policy</Link>
           <Link to="/TermsOfUse"><i className="fas fa-angle-right"></i> Terms of Use</Link>

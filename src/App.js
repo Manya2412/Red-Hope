@@ -8,6 +8,7 @@ import { HomeIntro, Collaborators, OurServices, FAQ } from './Home';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfUse from "./TermsOfUse";
+import ScrollToTop from "./ScrollToTop";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import AboutUs from './AboutUs';
@@ -16,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
