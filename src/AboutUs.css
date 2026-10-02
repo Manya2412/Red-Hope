@@ -1,0 +1,141 @@
+.about-section {
+    padding: 80px 8%;
+    background: #fff;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-subtitle {
+    display: inline-block;
+    color: #e63946;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.about-text h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #222;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+.about-text > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.about-highlights > div {
+    padding: 20px 15px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.about-highlights > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-highlights i {
+    font-size: 28px;
+    color: #e63946;
+    margin-bottom: 12px;
+}
+
+.about-highlights h3 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.about-highlights p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #777;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding: 50px 5%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text h1 {
+        font-size: 30px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-section {
+        padding: 40px 20px;
+    }
+
+    .about-text h1 {
+        font-size: 26px;
+    }
+
+    .about-text > p {
+        font-size: 14px;
+    }
+}

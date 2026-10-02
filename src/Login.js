@@ -1,11 +1,35 @@
 import "./Login.css";
 import React from "react";
+import { useState } from "react";
 
 function LoginForm() {
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        event.target.reset();
+        setSubmitted(true);
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        setTimeout(() => {
+            setSubmitted(false);
+        }, 4000);
+    };
+
     return (
         <div className="login-box">
             <div className="right-side">
-                <form action="loginpage.html" method="post" className="book-form">
+                {submitted && (
+                    <div className="success-message">
+                        Form submitted successfully!
+                    </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="book-form">
                     <div className="flex">
                         <h2>Log In</h2>
                         <div className="inputBox">

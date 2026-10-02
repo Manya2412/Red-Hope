@@ -1,12 +1,35 @@
 import React from "react";
 import "./FindBlood.css";
+import { useState } from "react";
 
-function Blood (){
+function Blood() {
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        event.target.reset();
+        setSubmitted(true);
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        setTimeout(() => {
+            setSubmitted(false);
+        }, 4000);
+    };
     return (
         <div className="FindBlood">
             <div className="left-side"></div>
             <div className="right-side">
-                <form action="FindBloodForm.html" method="post" className="book-form">
+                {submitted && (
+                    <div className="success-message">
+                        Form submitted successfully!
+                    </div>
+                )}
+
+                <form className="book-form" onSubmit={handleSubmit}>
                     <div className="flex">
                         <h2>Recipient Details</h2>
 
@@ -38,11 +61,6 @@ function Blood (){
                         <div className="inputBox">
                             <span>Blood  Group</span>
                             <input type="text" placeholder="Blood Group" name="bloodgroup" />
-                        </div>
-
-                        <div className="inputBox">
-                            <span>District</span>
-                            <input type="text" placeholder="District" name="district" />
                         </div>
 
                         <div className="inputBox">

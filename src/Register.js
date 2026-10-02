@@ -1,7 +1,23 @@
 import React from "react";
-import "./Register.css"
+import "./Register.css";
+import { useState } from "react";
 
 function RegisterDonor() {
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    event.target.reset();
+    setSubmitted(true);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 4000);
+  };
   return (
     <div>
       <div className="heading">
@@ -9,7 +25,12 @@ function RegisterDonor() {
       </div>
 
       <section className="booking">
-        <form action="RegisterForm.html" method="post" className="book-form">
+        {submitted && (
+          <div className="success-message">
+            Form submitted successfully!
+          </div>
+        )}
+        <form onSubmit={handleSubmit} className="book-form">
           <div className="flex">
             <div className="inputBox">
               <span>First Name</span>

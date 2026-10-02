@@ -12,7 +12,7 @@ function Footer() {
         </a>
         <h2>
           Ready to get started?
-          <a href="/RegisterNow" className="intro-btn">Donate</a>
+          <a href="/Register" className="intro-btn">Donate</a>
         </h2>
       </div>
 
@@ -23,7 +23,7 @@ function Footer() {
           <a href="/home"><i className="fas fa-angle-right"></i> Home</a>
           <a href="/aboutus"><i className="fas fa-angle-right"></i> About Us</a>
           <a href="/FindBlood"><i className="fas fa-angle-right"></i> Find Blood</a>
-          <a href="/RegisterNow"><i className="fas fa-angle-right"></i> Register Now</a>
+          <a href="/Register"><i className="fas fa-angle-right"></i> Register Now</a>
           <a href="/login"><i className="fas fa-angle-right"></i> Log In</a>
         </div>
 
@@ -31,16 +31,16 @@ function Footer() {
         <div className="box">
           <h3>Extra Links</h3>
           <a href="#"><i className="fas fa-angle-right"></i> Ask Questions</a>
-          <a href="#"><i className="fas fa-angle-right"></i> About Us</a>
-          <a href="#"><i className="fas fa-angle-right"></i> Privacy Policy</a>
-          <a href="#"><i className="fas fa-angle-right"></i> Terms of Use</a>
+          <a href="/aboutus"><i className="fas fa-angle-right"></i> About Us</a>
+          <a href="/PrivacyPolicy"><i className="fas fa-angle-right"></i> Privacy Policy</a>
+          <a href="/TermsOfUse"><i className="fas fa-angle-right"></i> Terms of Use</a>
         </div>
 
         {/* Contact Info */}
         <div className="box">
           <h3>Contact Info</h3>
-          <a href="tel:+919821225221"><i className="fas fa-phone"></i> +91 98212 25221</a>
-          <a href="tel:+919910034160"><i className="fas fa-phone"></i> +91 99100 34160</a>
+          <a href="tel:+919876543210"><i className="fas fa-phone"></i> +91 98765 43210</a>
+          <a href="tel:+919887766554"><i className="fas fa-phone"></i> +91 98877 66554</a>
           <a href="mailto:redhope@gmail.com"><i className="fas fa-envelope"></i> <span>redhope@gmail.com</span></a>
           <a href="#"><i className="fas fa-map"></i> Delhi, India - 110086</a>
         </div>

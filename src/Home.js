@@ -2,7 +2,7 @@ import React from "react";
 import "./Styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // Home Intro 
 const HomeIntro = () => {
@@ -20,7 +20,6 @@ const HomeIntro = () => {
 };
 
 //Our Mission
-
 //Our  Collaborators
 const collaborators = [
   { img: "/Hospital1.png", name: "FORTIS" },
@@ -94,8 +93,107 @@ function OurServices() {
   );
 }
 
+//Frequently Asked Questions
+function FAQ() {
+  const [activeIndex, setActiveIndex] = useState(null);
 
-export { HomeIntro, Collaborators, OurServices };
+  const faqs = [
+    {
+      question: "What is Red Hope?",
+      answer:
+        "Red Hope is a platform that connects blood donors with people who need blood. It helps donors manage their information and helps recipients find relevant blood availability information."
+    },
+    {
+      question: "How can I register as a blood donor?",
+      answer:
+        "You can register as a donor by clicking on the Register Now option in the navigation bar and providing the required information."
+    },
+    {
+      question: "How can I find blood through Red Hope?",
+      answer:
+        "Go to the Find Blood section and enter the required recipient and blood group information to search for relevant blood availability."
+    },
+    {
+      question: "Which blood groups are supported?",
+      answer:
+        "Red Hope supports the commonly used blood groups: A+, A-, B+, B-, AB+, AB-, O+ and O-."
+    },
+    {
+      question: "Can I update my donor information?",
+      answer:
+        "Donor information can be updated when the corresponding account or profile management functionality is available on the platform."
+    },
+    {
+      question: "Does Red Hope guarantee blood availability?",
+      answer:
+        "No. Blood availability can change frequently. Red Hope provides information to help users find relevant options, but availability should always be confirmed with the respective hospital or blood bank."
+    },
+    {
+      question: "How often can I donate blood?",
+      answer:
+        "Blood donation frequency depends on factors such as your health, type of donation and applicable medical guidelines. Please consult a qualified healthcare professional or blood donation center before donating."
+    },
+    {
+      question: "Is my personal information safe?",
+      answer:
+        "Red Hope is designed to handle user information responsibly. Please refer to the Privacy Policy for details about the information collected and how it is used."
+    }
+  ];
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="faq-section">
+      <div className="faq-container">
+
+        <div className="faq-heading">
+          <span>Have Questions?</span>
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Find answers to some of the most common questions about
+            blood donation and using Red Hope.
+          </p>
+        </div>
+
+        <div className="faq-list">
+          {faqs.map((faq, index) => (
+            <div
+              className={`faq-item ${
+                activeIndex === index ? "active" : ""
+              }`}
+              key={index}
+            >
+              <button
+                className="faq-question"
+                onClick={() => toggleFAQ(index)}
+              >
+                <span>{faq.question}</span>
+
+                <i
+                  className={`fas ${
+                    activeIndex === index
+                      ? "fa-minus"
+                      : "fa-plus"
+                  }`}
+                ></i>
+              </button>
+
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+
+export { HomeIntro, Collaborators, OurServices, FAQ };
 
 
   
