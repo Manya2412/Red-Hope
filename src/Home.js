@@ -2,7 +2,7 @@ import React from "react";
 import "./Styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Home Intro 
 const HomeIntro = () => {

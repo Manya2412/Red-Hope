@@ -433,14 +433,16 @@ section{
     padding-bottom: 1rem;
 }
 
-.footer .box-container .box a{
-    color:var(--light_white);
+.footer .box-container .box a,
+.footer .box-container .box > span {
+    color: var(--light_white);
     font-size: 1.5rem;
     padding-bottom: 1rem;
     display: block;
 }
 
-.footer .box-container .box a i{
+.footer .box-container .box a i,
+.footer .box-container .box span i{
     color:var(--color10);
     padding-right: .5rem;
     transition: .2s linear;
@@ -539,10 +541,6 @@ section{
         text-align: center;
     }
 }
-
-/* =========================
-   FAQ Section
-========================= */
 
 .faq-section {
     padding: 80px 8%;
